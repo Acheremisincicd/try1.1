@@ -93,4 +93,3 @@ C:\Users\mrrobot\Desktop\try1.1\Sample\Sample\obj\Debug\netcoreapp2.1\Sample.Vie
 C:\Users\mrrobot\Desktop\try1.1\Sample\Sample\obj\Debug\netcoreapp2.1\Sample.dll
 C:\Users\mrrobot\Desktop\try1.1\Sample\Sample\obj\Debug\netcoreapp2.1\Sample.pdb
 C:\Users\mrrobot\Desktop\try1.1\Sample\Sample\obj\Debug\netcoreapp2.1\Sample.csproj.CopyComplete
-C:\Users\mrrobot\Desktop\try1.1\Sample\Sample\obj\Debug\netcoreapp2.1\Sample.csprojAssemblyReference.cache
