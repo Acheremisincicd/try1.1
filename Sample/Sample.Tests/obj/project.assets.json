@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "Microsoft.Build.Framework/16.0.461": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.Serialization.Primitives": "4.1.1",
+          "System.Threading.Thread": "4.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Build.Framework.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Build.Framework.dll": {}
+        }
+      },
       "Microsoft.CodeCoverage/16.0.1": {
         "type": "package",
         "compile": {
@@ -1651,6 +1664,24 @@
     }
   },
   "libraries": {
+    "Microsoft.Build.Framework/16.0.461": {
+      "sha512": "A7krf1sxJn7BsQDz5qHU8QLMu55JaZkF7bfNYP3EVlzi4IbEArnMBCuNP9gR93LpT2XdCBzSBtXc50m6u2N9Kw==",
+      "type": "package",
+      "path": "microsoft.build.framework/16.0.461",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/Microsoft.Build.Framework.dll",
+        "lib/net472/Microsoft.Build.Framework.pdb",
+        "lib/net472/Microsoft.Build.Framework.xml",
+        "lib/netstandard2.0/Microsoft.Build.Framework.dll",
+        "lib/netstandard2.0/Microsoft.Build.Framework.pdb",
+        "lib/netstandard2.0/Microsoft.Build.Framework.xml",
+        "microsoft.build.framework.16.0.461.nupkg.sha512",
+        "microsoft.build.framework.nuspec",
+        "notices/THIRDPARTYNOTICES.txt"
+      ]
+    },
     "Microsoft.CodeCoverage/16.0.1": {
       "sha512": "W7WI3iH6At2I/9x2ODgCIIMO0QfpA7ZCoHkeygMLAaz3Nms/GsugKz9N4hkTve2Lj66g2K4CAmbwe6utEH66lw==",
       "type": "package",
@@ -5762,6 +5793,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Microsoft.Build.Framework >= 16.0.461",
       "Microsoft.NET.Test.Sdk >= 16.0.1",
       "Microsoft.NETCore.App >= 2.1.0",
       "NUnit >= 3.11.0",
@@ -5775,11 +5807,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mrrobot\\Desktop\\Sample\\Sample.Tests\\Sample.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\mrrobot\\Desktop\\try1.1\\Sample\\Sample.Tests\\Sample.Tests.csproj",
       "projectName": "Sample.Tests",
-      "projectPath": "C:\\Users\\mrrobot\\Desktop\\Sample\\Sample.Tests\\Sample.Tests.csproj",
+      "projectPath": "C:\\Users\\mrrobot\\Desktop\\try1.1\\Sample\\Sample.Tests\\Sample.Tests.csproj",
       "packagesPath": "C:\\Users\\mrrobot\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mrrobot\\Desktop\\Sample\\Sample.Tests\\obj\\",
+      "outputPath": "C:\\Users\\mrrobot\\Desktop\\try1.1\\Sample\\Sample.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5809,6 +5841,10 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "Microsoft.Build.Framework": {
+            "target": "Package",
+            "version": "[16.0.461, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[16.0.1, )"
