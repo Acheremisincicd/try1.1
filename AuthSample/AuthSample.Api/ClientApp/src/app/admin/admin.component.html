@@ -1,0 +1,13 @@
+<h1>Admin panel</h1>
+
+<p><b>Page accessible only for admins.</b></p>
+
+<p *ngIf="!data && !accessDenied"><em>Loading...</em></p>
+
+<div *ngIf="data">
+  Server response:
+  <p>{{data}}</p>
+</div>
+<div *ngIf="accessDenied" style="color: red;">
+  Sorry, you don't have sufficient permission for access to this page.
+</div>

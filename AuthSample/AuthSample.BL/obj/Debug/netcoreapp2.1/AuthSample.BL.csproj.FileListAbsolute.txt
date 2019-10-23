@@ -1,0 +1,14 @@
+C:\Users\Mykyta_Fokin\source\repos\cdp_2018_mykyta_fokin\Module4\hw4\AuthSample\AuthSample.BL\bin\Debug\netcoreapp2.1\AuthSample.BL.deps.json
+C:\Users\Mykyta_Fokin\source\repos\cdp_2018_mykyta_fokin\Module4\hw4\AuthSample\AuthSample.BL\bin\Debug\netcoreapp2.1\AuthSample.BL.dll
+C:\Users\Mykyta_Fokin\source\repos\cdp_2018_mykyta_fokin\Module4\hw4\AuthSample\AuthSample.BL\bin\Debug\netcoreapp2.1\AuthSample.BL.pdb
+C:\Users\Mykyta_Fokin\source\repos\cdp_2018_mykyta_fokin\Module4\hw4\AuthSample\AuthSample.BL\bin\Debug\netcoreapp2.1\AuthSample.DAL.dll
+C:\Users\Mykyta_Fokin\source\repos\cdp_2018_mykyta_fokin\Module4\hw4\AuthSample\AuthSample.BL\bin\Debug\netcoreapp2.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Mykyta_Fokin\source\repos\cdp_2018_mykyta_fokin\Module4\hw4\AuthSample\AuthSample.BL\bin\Debug\netcoreapp2.1\AuthSample.DAL.pdb
+C:\Users\Mykyta_Fokin\source\repos\cdp_2018_mykyta_fokin\Module4\hw4\AuthSample\AuthSample.BL\bin\Debug\netcoreapp2.1\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Mykyta_Fokin\source\repos\cdp_2018_mykyta_fokin\Module4\hw4\AuthSample\AuthSample.BL\obj\Debug\netcoreapp2.1\AuthSample.BL.csprojAssemblyReference.cache
+C:\Users\Mykyta_Fokin\source\repos\cdp_2018_mykyta_fokin\Module4\hw4\AuthSample\AuthSample.BL\obj\Debug\netcoreapp2.1\AuthSample.BL.csproj.CoreCompileInputs.cache
+C:\Users\Mykyta_Fokin\source\repos\cdp_2018_mykyta_fokin\Module4\hw4\AuthSample\AuthSample.BL\obj\Debug\netcoreapp2.1\AuthSample.BL.AssemblyInfoInputs.cache
+C:\Users\Mykyta_Fokin\source\repos\cdp_2018_mykyta_fokin\Module4\hw4\AuthSample\AuthSample.BL\obj\Debug\netcoreapp2.1\AuthSample.BL.AssemblyInfo.cs
+C:\Users\Mykyta_Fokin\source\repos\cdp_2018_mykyta_fokin\Module4\hw4\AuthSample\AuthSample.BL\obj\Debug\netcoreapp2.1\AuthSample.BL.csproj.CopyComplete
+C:\Users\Mykyta_Fokin\source\repos\cdp_2018_mykyta_fokin\Module4\hw4\AuthSample\AuthSample.BL\obj\Debug\netcoreapp2.1\AuthSample.BL.dll
+C:\Users\Mykyta_Fokin\source\repos\cdp_2018_mykyta_fokin\Module4\hw4\AuthSample\AuthSample.BL\obj\Debug\netcoreapp2.1\AuthSample.BL.pdb
