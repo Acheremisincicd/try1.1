@@ -3,6 +3,11 @@ package com.epam.preprod.biletska.dao;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * DAO interface.
+ *
+ * @param <T> param
+ */
 public interface IDao<T> {
 
     /**

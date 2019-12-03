@@ -13,6 +13,7 @@ public class RegistrationFormDto {
     private String confirmPassword;
     private String email;
     private boolean isMailingEnable;
+    private String role;
 
     /**
      * Instantiates a new RegistrationServlet form dto.
@@ -23,14 +24,16 @@ public class RegistrationFormDto {
      * @param confirmPassword the confirmPassword
      * @param email           the email
      * @param isMailingEnable the isMailingEnable
+     * @param role            the role
      */
-    public RegistrationFormDto(String firstName, String lastName, String password, String confirmPassword, String email, boolean isMailingEnable) {
+    public RegistrationFormDto(String firstName, String lastName, String password, String confirmPassword, String email, boolean isMailingEnable, String role) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
         this.confirmPassword = confirmPassword;
         this.email = email;
         this.isMailingEnable = isMailingEnable;
+        this.role = role;
     }
 
     public String getFirstName() {
@@ -81,6 +84,14 @@ public class RegistrationFormDto {
         this.isMailingEnable = mailingEnable;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -91,11 +102,12 @@ public class RegistrationFormDto {
                 && Objects.equals(getLastName(), that.getLastName())
                 && Objects.equals(getPassword(), that.getPassword())
                 && Objects.equals(getConfirmPassword(), that.getConfirmPassword())
-                && Objects.equals(getEmail(), that.getEmail());
+                && Objects.equals(getEmail(), that.getEmail())
+                && Objects.equals(getRole(), that.getRole());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getFirstName(), getLastName(), getPassword(), getConfirmPassword(), getEmail(), isMailingEnable());
+        return Objects.hash(getFirstName(), getLastName(), getPassword(), getConfirmPassword(), getEmail(), isMailingEnable(), getRole());
     }
 }

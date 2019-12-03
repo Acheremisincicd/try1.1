@@ -12,7 +12,7 @@ public interface IUserDao extends IDao<User>, IMapper<User> {
     /**
      * Gets user by login.
      *
-     * @param login the login
+     * @param login : the login
      * @return the user by login
      */
     User findByLogin(String login) throws SQLException;

@@ -26,6 +26,6 @@ public class LogoutServlet extends HttpServlet {
         HttpSession session = req.getSession(false);
         session.removeAttribute(CommonDefinitions.LOGGED_USER);
         session.invalidate();
-        resp.sendRedirect(req.getContextPath() + Constants.INDEX_HTML);
+        resp.sendRedirect(req.getContextPath() + Constants.INDEX_JSP);
     }
 }

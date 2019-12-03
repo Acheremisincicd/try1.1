@@ -102,7 +102,7 @@ public class RegistrationServlet extends HttpServlet {
             } catch (UserCreateException uce) {
                 uce.printStackTrace();
             }
-            httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + Constants.INDEX_HTML);
+            httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + Constants.INDEX_JSP);
         } else {
             session.setAttribute(Constants.USER_FORM, registrationFormDto);
             session.setAttribute(Constants.REGISTRATION_ERRORS, errors);
@@ -117,7 +117,8 @@ public class RegistrationServlet extends HttpServlet {
                 servletRequest.getParameter("user_password"),
                 servletRequest.getParameter("confirm_password"),
                 servletRequest.getParameter("user_email"),
-                Boolean.parseBoolean(servletRequest.getParameter("notification"))
+                Boolean.parseBoolean(servletRequest.getParameter("notification")),
+                "user"
         );
         return registrationFormDto;
     }
@@ -129,6 +130,7 @@ public class RegistrationServlet extends HttpServlet {
         user.setEmail(registrationFormDto.getEmail());
         user.setPassword(registrationFormDto.getPassword());
         user.setMailingEnabled(registrationFormDto.isMailingEnable());
+        user.setRole("user");
         return user;
     }
 }

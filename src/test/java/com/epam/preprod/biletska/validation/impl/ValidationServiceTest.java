@@ -1,7 +1,7 @@
 package com.epam.preprod.biletska.validation.impl;
 
 import com.epam.preprod.biletska.dto.RegistrationFormDto;
-import com.epam.preprod.biletska.services.impl.UserServiceUserService;
+import com.epam.preprod.biletska.services.impl.UserService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,7 +40,7 @@ public class ValidationServiceTest {
     private Map<String, String> errors;
 
     @Mock
-    private UserServiceUserService userService;
+    private UserService userService;
 
     @Before
     public void setUp() throws Exception {
@@ -56,7 +56,7 @@ public class ValidationServiceTest {
     @Test
     public void shouldTestValidRegistrationCase() {
         registrationFormDto = new RegistrationFormDto("Ivan", "Ivanov", "Aa1234567",
-                "Aa1234567", "ivan@gmail.com", true);
+                "Aa1234567", "ivan@gmail.com", true,"admin");
         validationService.fillRegistrationErrorMap(registrationFormDto, userService, errors);
         assertTrue(errors.isEmpty());
     }
@@ -67,7 +67,7 @@ public class ValidationServiceTest {
     @Test
     public void shouldTestInvalidRegistrationCase() {
         registrationFormDto = new RegistrationFormDto("a", "b", "v22",
-                "g33", ".@-->.ru", true);
+                "g33", ".@-->.ru", true, "user");
         validationService.fillRegistrationErrorMap(registrationFormDto, userService, errors);
         assertEquals(5, errors.size());
     }
@@ -78,7 +78,7 @@ public class ValidationServiceTest {
     @Test
     public void shouldTestNullRegistrationCase() {
         registrationFormDto = new RegistrationFormDto("aaa", null, null,
-                null, null, true);
+                null, null, true, "user");
         validationService.fillRegistrationErrorMap(registrationFormDto, userService, errors);
         assertFalse(errors.isEmpty());
         assertTrue(errors.containsValue("Email should not be empty!"));

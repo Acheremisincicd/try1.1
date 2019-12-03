@@ -1,5 +1,8 @@
 <%@ include file="/WEB-INF/jspf/directive/taglib.jspf" %>
 <%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="my" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!doctype html>
 <html lang="en">
 
@@ -19,6 +22,7 @@
     <link rel="stylesheet" href="css/themify-icons.css">
     <!-- flaticon CSS -->
     <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/nice-select.css">
     <!-- font awesome CSS -->
     <link rel="stylesheet" href="css/magnific-popup.css">
     <!-- style CSS -->
@@ -55,7 +59,6 @@
                              </div>
                              <!-- Login tag ends -->
 
-
     <div class="main_menu">
         <div class="container">
             <div class="row">
@@ -70,32 +73,23 @@
                         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item active">
-                                    <a class="nav-link active" href="index.jsp">Home</a>
+                                    <a class="nav-link active" href="index.jsp"><fmt:message key="header.home"/></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="about.html" class="nav-link">About</a>
+                                    <a href="about.html" class="nav-link"><fmt:message key="header.about"/></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="products.html" class="nav-link">Products</a>
+                                    <a href="./product" class="nav-link"><fmt:message key="header.catalogue"/></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="gallery.html" class="nav-link">gallery</a>
+                                    <a href="gallery.html" class="nav-link"><fmt:message key="header.gallery"/></a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Languages
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">ru</a>
-                                        <a class="dropdown-item" href="#">en</a>
-                                    </div>
+                                <my:locale/>
+                                <li class="nav-item">
+                                    <a href="blog.html" class="nav-link"><fmt:message key="header.license"/></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="blog.html" class="nav-link">License</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="contact.html" class="nav-link">Contact</a>
+                                    <a href="contact.html" class="nav-link"><fmt:message key="header.contacts"/></a>
                                 </li>
                             </ul>
                         </div>
@@ -116,7 +110,7 @@
                     <h5>Welcome to IWorld</h5>
                     <h1>Follow Your
                         Dreams</h1>
-                    <a href="products.html" class="btn_1">OUR PRODUCTS</a>
+                    <a href="./product" class="btn_1">OUR PRODUCTS</a>
                 </div>
             </div>
         </div>

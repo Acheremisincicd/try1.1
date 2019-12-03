@@ -51,7 +51,11 @@ public class LoginServlet extends HttpServlet {
         try {
             User loggedUser = userService.getUserByLogin(loginData.getLogin());
             request.getSession(true).setAttribute(CommonDefinitions.LOGGED_USER, loggedUser);
-
+            request.getSession().setAttribute("user", userService.getUserByLogin(loginData.getLogin()));
+            if(!loginData.getPassword().equals(loggedUser.getPassword())){
+                errors.put(ERROR_NO_LOGIN, "Invalid password");
+                request.getSession(true).setAttribute(CommonDefinitions.LOGGED_USER, null);
+            }
         } catch (UserNotFoundException unfe) {
             logger.error("Error occurred when getting user by login: {}, {}", loginData.getLogin(), unfe.getMessage());
             errors.put(ERROR_NO_LOGIN, "No login found");
@@ -68,6 +72,6 @@ public class LoginServlet extends HttpServlet {
         if (session == null || session.getAttribute(CommonDefinitions.LOGGED_USER) == null) {
             doLogin(req, resp);
         }
-        resp.sendRedirect(req.getContextPath() + Constants.INDEX_HTML);
+        resp.sendRedirect(req.getContextPath() + Constants.INDEX_JSP);
     }
 }

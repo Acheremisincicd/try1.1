@@ -24,7 +24,8 @@ public class UserDao implements IUserDao {
         pst.setString(i++, user.getLastName());
         pst.setString(i++, user.getEmail());
         pst.setString(i++, user.getPassword());
-        pst.setBoolean(i, user.isMailingEnabled());
+        pst.setBoolean(i++, user.isMailingEnabled());
+        pst.setString(i, user.getRole());
         return pst;
     }
 
@@ -95,6 +96,7 @@ public class UserDao implements IUserDao {
         user.setEmail(rs.getString(RepositoryConstants.USER_EMAIL));
         user.setPassword(rs.getString(RepositoryConstants.USER_PASSWORD));
         user.setMailingEnabled(rs.getBoolean(RepositoryConstants.USER_MAILING));
+        user.setRole(rs.getString(RepositoryConstants.USER_ROLE));
         return user;
     }
 }

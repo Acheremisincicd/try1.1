@@ -48,7 +48,7 @@ public class ImageServlet extends HttpServlet {
     protected final void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         HttpSession session = request.getSession();
         if (session == null || session.getAttribute(CommonDefinitions.LOGGED_USER) == null) {
-            request.getRequestDispatcher(Constants.INDEX_HTML).forward(request, response);
+            request.getRequestDispatcher(Constants.INDEX_JSP).forward(request, response);
         }
 
         User loggedUser = (User) session.getAttribute(CommonDefinitions.LOGGED_USER);

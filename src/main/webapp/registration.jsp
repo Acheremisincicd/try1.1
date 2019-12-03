@@ -1,5 +1,7 @@
 <%@ include file="/WEB-INF/jspf/directive/taglib.jspf" %>
 <%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="my" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!doctype html>
 <html lang="en">
 
@@ -28,82 +30,77 @@
 
 <body>
 <c:set var="isUserLogged" value="${not empty loggedUser}"/>
-    <!--::header part start::-->
-    <header class="header_area">
-        <div class="sub_header">
-            <div class="container">
-                <div class="row align-items-center" style="height: 30px">
-                  <div class="col-4 col-md-4 col-xl-6" style="height: 50px">
-                      <div id="logo">
-                          <a href="index.jsp"><img src="img/logo1.jpg" alt="" title="" style="height: 50px" /></a>
-                      </div>
-                  </div>
-                  <div class="col-8 col-md-8 col-xl-6 " style="height: 50px">
-                      <div class="sub_header_social_icon float-right">
-                        <a href="#"><i class="flaticon-phone"></i>+38 (063) 373 - 33 -33</a>
-                      </div>
+<!--::header part start::-->
+<header class="header_area">
+    <div class="sub_header">
+        <div class="container">
+            <div class="row align-items-center" style="height: 30px">
+                <div class="col-4 col-md-4 col-xl-6" style="height: 50px">
+                    <div id="logo">
+                        <a href="index.jsp"><img src="img/logo1.jpg" alt="" title="" style="height: 50px"/></a>
                     </div>
                 </div>
-            </div>
-         </div>
-
-           <!-- Login tag  -->
-                         <div class="header">
-                             <ul class="logreg">
-                                 <li><tag:login/> </li>
-                             </ul>
-                         </div>
-                         <!-- Login tag ends -->
-
-        <div class="main_menu">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <i class="ti-menu"></i>
-                            </button>
-
-                            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item active">
-                                        <a class="nav-link active" href="index.jsp">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="about.html" class="nav-link">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                            <a href="products.html" class="nav-link">Products</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="gallery.html" class="nav-link">gallery</a>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Languages
-                                            </a>
-                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="#">ru</a>
-                                                <a class="dropdown-item" href="#">en</a>
-                                            </div>
-                                        </li>
-                                    <li class="nav-item">
-                                        <a href="blog.html" class="nav-link">License</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="contact.html" class="nav-link">Contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
+                <div class="col-8 col-md-8 col-xl-6 " style="height: 50px">
+                    <div class="sub_header_social_icon float-right">
+                        <a href="#"><i class="flaticon-phone"></i>+38 (063) 373 - 33 -33</a>
+                        <a href="./register" class="btn_1 d-none d-md-inline-block">Sign in</a>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
 
-    <!-- Header part end-->
-    <br>
+     <!-- Login tag  -->
+                             <div class="header">
+                                 <ul class="logreg">
+                                     <li><tag:login/> </li>
+                                 </ul>
+                             </div>
+                             <!-- Login tag ends -->
+
+    <div class="main_menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="ti-menu"></i>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link active" href="index.jsp"><fmt:message key="header.home"/></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="about.html" class="nav-link"><fmt:message key="header.about"/></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./product" class="nav-link"><fmt:message key="header.catalogue"/></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="gallery.html" class="nav-link"><fmt:message key="header.gallery"/></a>
+                                </li>
+                                <my:locale/>
+                                <li class="nav-item">
+                                    <a href="blog.html" class="nav-link"><fmt:message key="header.license"/></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="contact.html" class="nav-link"><fmt:message key="header.contacts"/></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header part end-->
+<br/>
+
     <header class="page-header">
         <div style="text-align: center">
             <h1 style="color: rgb(22, 53, 88)">Registration Page.</h1>
@@ -301,7 +298,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/owl.carousel.min.js"></script>
     <!-- custom js -->
     <script src="js/custom.js"></script>
-
     <script src="js/formValidation.js"></script>
     <!-- <script src="js/formValidationJQuery.js"></script> -->
   </body>

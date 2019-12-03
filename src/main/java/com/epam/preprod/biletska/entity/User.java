@@ -12,16 +12,18 @@ public class User {
     private String email;
     private String password;
     private boolean isMailingEnabled;
+    private String role;
 
     public User() {
     }
 
-    public User(String firstName, String lastName, String email, String password, boolean isMailingEnabled) {
+    public User(String firstName, String lastName, String email, String password, boolean isMailingEnabled, String role) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.isMailingEnabled = isMailingEnabled;
+        this.role = role;
     }
 
     public String getFirstName() {
@@ -64,6 +66,14 @@ public class User {
         this.isMailingEnabled = mailingEnabled;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -73,12 +83,13 @@ public class User {
                 Objects.equals(firstName, user.firstName) &&
                 Objects.equals(lastName, user.lastName) &&
                 Objects.equals(email, user.email) &&
-                Objects.equals(password, user.password);
+                Objects.equals(password, user.password)&&
+                Objects.equals(role, user.role);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName, email, password, isMailingEnabled);
+        return Objects.hash(firstName, lastName, email, password, isMailingEnabled, role);
     }
 
     public String getKey() {

@@ -1,0 +1,23 @@
+<security>
+    <constraint>
+        <url-pattern>/*</url-pattern>
+        <role>admin</role>
+    </constraint>
+    <constraint>
+        <url-pattern>/WebShop/product</url-pattern>
+        <url-pattern>/WebShop/index.jsp</url-pattern>
+        <url-pattern>/WebShop/logout</url-pattern>
+        <url-pattern>/WebShop/cart</url-pattern>
+        <url-pattern>/</url-pattern>
+        <role>user</role>
+    </constraint>
+    <constraint>
+        <url-pattern>/</url-pattern>
+        <url-pattern>/WebShop/index.jsp</url-pattern>
+        <url-pattern>/WebShop/login</url-pattern>
+        <url-pattern>/WebShop/register</url-pattern>
+        <url-pattern>/WebShop/gallery.html</url-pattern>
+        <url-pattern>/WebShop/about.html</url-pattern>
+        <role>unknown</role>
+    </constraint>
+</security>
